@@ -1,0 +1,460 @@
+$roboto: 'Roboto Slab', serif
+$colorred: #c0301c
+
+@mixin btn
+	display: inline-block
+	text-transform: uppercase
+	text-decoration: none
+	color: #fff
+	font-size: 16px
+	font-weight: 400
+	border: 2px solid #fff
+	border-radius: 3px
+	padding: 16px 35px
+	transition: 0.3s
+	&:hover
+		background-color: #fff
+		color: #000
+
+.title
+	padding-top: 100px
+	font-size: 20px
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	&:after
+		content: ''
+		display: block
+		width: 50px
+		height: 1px
+		background-color: #555555
+		margin: 30px auto 28px
+
+.subtitle
+	font-size: 16px
+	font-weight: 400
+	text-align: center
+
+body 
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	color: #555555
+
+.header
+	height: 100vh
+	background: url(../img/headback.jpg)  no-repeat center / cover 
+	color: #fff
+	.container
+		position: relative
+		height: 100%
+	.nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		padding-top: 40px
+		&__logo
+			a
+				text-decoration: none
+				color: #fff
+				font-size: 24px
+				font-weight: 700
+		&__menu
+			list-style: none
+			display: flex
+			flex-wrap: wrap
+			li
+				margin: 0 18px
+				a
+					text-decoration: none
+					color: #fff
+					font-size: 14px
+					font-weight: 400
+			li:last-child
+				margin-right: 0
+
+	&__content
+		text-align: center
+		position: absolute
+		width: 100%
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		h1
+			text-transform: uppercase
+			font-size: 48px
+			font-weight: 400
+	&__subtitle
+		font-size: 20px
+		font-weight: 400
+		margin: 34px 0 56px
+	&__btn
+		+btn
+.services
+	&__row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 70px 0 100px
+	&__item
+		width: 31%
+		text-align: center
+	&__item:first-child .services__img
+		background-color: $colorred
+
+	&__img
+		width: 90px
+		height: 90px
+		border-radius: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 auto
+	&__skill
+		margin: 30px 0 25px
+		font-weight: 400
+		text-transform: uppercase
+	&__text
+		font-family: $roboto
+		font-weight: 400
+		line-height: 24px			
+.about
+	&__text
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		div
+			width: 49%
+			margin-top: 74px
+			font-family: $roboto
+			font-weight: 400
+			line-height: 24px
+	&__row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 66px 0 100px
+	&__item
+		width: 262px
+		&:hover img
+			opacity: 0.4
+		&:hover .about__menu
+			display: block	
+	&__img
+		background-color: #888
+		position: relative
+		img
+			display: block
+			transition: opacity 0.5s
+			
+		
+		.about__menu
+			position: absolute
+			bottom: 32px
+			left: 50%
+			transform: translateX(-50%)
+			display: none
+			transition: display
+			a
+				width: 28px
+				height: 28px
+				display: inline-block
+				text-align: center
+				position: relative
+				transition: 0.3s
+				i
+					color: #fff
+					line-height: 28px
+				&:hover
+					background-color: $colorred
+		
+	&__person
+		text-align: center
+		h3
+			text-transform: uppercase
+			font-weight: 400
+			margin: 20px 0 17px
+	&__pro
+		font-family: $roboto
+		font-size: 13px
+.work
+	&__menu
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		list-style: none
+		li
+			font-family: $roboto
+			font-size: 16px
+			margin: 0 13px
+			cursor: pointer
+			&:hover
+				color: $colorred
+	&__colum
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin: 41px 0 100px
+	&__item
+		margin-top: 30px
+		background-color: $colorred
+		position: relative
+		&:hover .work__info
+			opacity: 1
+		&:hover img
+			opacity: 0.3
+		img
+			display: block
+			width: 100%
+			transition: opacity 0.3s
+	&__info
+		opacity: 0
+		margin: 0 auto
+		width: 100%
+		position: absolute
+		text-align: center
+		top: 50%
+		transform: translateY(-50%)
+		color: #fff
+		transition: opacity 0.3s
+	&__name
+		font-size: 18px
+	&__about
+		font-family: $colorred
+		font-size: 12px
+		margin: 18px 0 25px
+	&__btn
+		display: inline-block
+		background-color: #fff
+		padding: 14px 21px
+		font-size: 14px
+		color: $colorred
+		text-transform: uppercase
+		&:after
+			content: '>'
+			text-transform: uppercase
+			font-size: 15px
+			padding-left: 10px
+aside
+	background: url(../img/workback.jpg) no-repeat center / cover
+	text-align: center 
+	.aside-text
+		font-family: $roboto
+		font-size: 30px
+		color: #fff
+		max-width: 460px
+		text-align: center
+		line-height: 44px
+		margin: 0 auto
+		padding: 100px 0 0
+		span
+			text-transform: uppercase
+	.aside-btn
+		+btn
+		margin: 50px 0 100px
+.blog
+	&__item
+		margin: 40px 0 100px
+	&__post
+		margin-top: 30px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&:first-child
+			padding-bottom: 30px
+			border-bottom: 1px solid #ddd
+	&__img
+		img
+			width: 100%
+	.post
+		max-width: 650px
+		&__header
+			display: flex
+			align-items: center
+		&__date
+			border: 2px solid #555
+			width: 70px
+			height: 70px
+			position: relative
+			text-align: center
+			div
+				width: 100%
+				margin: 0 auto
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				span
+					font-size: 24px
+					font-weight: 700
+		&__info
+			margin-left: 26px
+		&__name
+			font-size: 16px
+			font-weight: 700
+			text-transform: uppercase
+			color: $colorred
+			margin-bottom: 17px
+		&__by
+			font-family: $roboto
+			font-size: 13px
+			font-style: italic 
+		&__text
+			margin: 23px 0 38px
+			font-family: $roboto
+			line-height: 24px
+		&__btn
+			font-family: $roboto
+			font-weight: 700
+			font-size: 13px
+			text-transform: uppercase
+			color: #777
+			&:hover
+				color: $colorred
+.clients
+	background-color: #f8f8f8
+	&__imges
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		align-items: center
+		padding: 97px 0 80px
+	&__review.active
+		display: block
+	&__review
+		max-width: 790px
+		text-align: center
+		margin: 0 auto
+		display: none
+	&__text
+		font-family: $roboto
+		font-size: 18px
+		font-style: italic
+		line-height: 30px
+	&__name
+		margin-top: 40px
+		font-family: $roboto
+		font-size: 20px
+	&__slider
+		display: flex
+		justify-content: center
+	&__round
+		width: 13px
+		height: 13px
+		border-radius: 50%
+		background-color: #ddd
+		margin: 36px 3px 100px
+		cursor: pointer 
+	&__round.active
+		background-color: $colorred
+.contact
+	&__wrap
+		margin: 71px 0 100px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+	&__info
+		margin-bottom: 36px
+	&__type
+		position: relative
+		h4
+			text-transform: uppercase
+			margin-bottom: 18px
+		.contact__icon
+			width: 15px
+			text-align: center
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -18px
+	&__text
+		font-family: $roboto
+		font-size: 12px
+	.form
+		max-width: 530px
+
+		&__row
+			display: flex
+			input
+				width: 100%
+				max-width: 350px
+				margin-bottom: 20px
+				padding: 16px 18px
+				text-transform: uppercase
+				font-family: $roboto
+				font-size: 12px
+			input:focus
+				outline: 1px solid $colorred
+		&__row input:first-child 
+			margin-right: 30px
+		textarea
+			display: block
+			box-sizing: border-box
+			width: 100%
+			max-width: 727.5px
+			height: 84px
+			resize: none
+			padding-top: 16px
+			padding-left: 18px
+			text-transform: uppercase
+			font-family: $roboto
+			font-size: 12px
+		textarea:focus
+			outline: 1px solid $colorred
+		&__btn
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-top: 20px
+			button
+				border: 1px solid #555555
+				background-color: #fff
+				padding: 16px 36px
+				font-family: $roboto
+				font-size: 12px
+				text-transform: uppercase
+				cursor: pointer
+				&:focus
+					outline: 1px solid $colorred
+				&:hover
+					background-color: $colorred
+					color: #fff
+		&__text
+			font-family: $roboto
+			font-size: 12px
+			span
+				color: $colorred
+.footer
+	background-color: $colorred
+	&__menu
+		padding-top: 100px
+		display: flex
+		justify-content: center
+		
+	&__icon
+		width: 31px
+		height: 31px
+		border-radius: 50%
+		border: 1px solid #fff
+		text-align: center
+		line-height: 31px
+		margin: 0 7px
+		a
+			color: #fff
+	&__text
+		font-family: $roboto
+		font-size: 12px
+		text-transform: uppercase
+		color: #fff
+		text-align: center
+		padding-bottom: 100px
+		&:before
+			content: ''
+			display: block
+			width: 50px
+			height: 1px
+			background-color: #fff
+			margin: 30px auto 
+
